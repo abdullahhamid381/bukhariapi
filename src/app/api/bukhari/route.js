@@ -5,11 +5,18 @@ import { NextResponse } from "next/server";
 export async function GET(){
 let bukhariget = []
 try {
-    await mongoose.connect('mongodb+srv://abdullahhamid381:abdullahhamid786@cluster0.siyjtub.mongodb.net/BukhariDb?retryWrites=true&w=majority')
-bukhariget = Bukhari.find()
+    await mongoose.connect('mongodb+srv://abdullahhamid381:abdullahhamid786@cluster0.siyjtub.mongodb.net/BukhariDB?retryWrites=true&w=majority')
+bukhariget = await Bukhari.find()
 } catch (error) {
-    
+    bukhariget={success:false}
 }
 
-    return NextResponse.json({})
+    return NextResponse.json({bukhariget,success:true})
+}
+
+
+export async function POST(){
+    let addbukhari = new Bukhari();
+    const resultadd = addbukhari.find();
+    ret
 }
