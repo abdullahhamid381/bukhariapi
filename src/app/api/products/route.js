@@ -23,5 +23,14 @@ export async function GET(){
    } catch (error) {
     data={success:false}
    }
-    return NextResponse.json({result:data})
+    return NextResponse.json({data})
+}
+
+
+export async function POST(request){
+    let payload = request.json();
+    await mongoose.connect('mongodb+srv://abdullahhamid381:abdullahhamid786@cluster0.siyjtub.mongodb.net/ProductDb?retryWrites=true&w=majority')
+    let add = new Product(payload);
+    const resultadd = await add.save();
+    return NextResponse.json({resultadd,success:true})
 }
