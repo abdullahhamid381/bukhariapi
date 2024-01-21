@@ -15,21 +15,9 @@ export async function GET() {
 }
 
 
-export async function POST() {
-    let addbukhari = new Bukhari(
-        {
-            Baab:
-                "A statement of revelation",
-            Book:
-                "Sahih Bukhari",
-            Chapter:
-                "The Book Of Revelation",
-            Status:
-                "Correct",
-            Hadith:
-                "2",
-        }
-    );
-    const resultadd = addbukhari.find();
+export async function POST(request) {
+    let payload = await request.json()
+    let addbukhari = new Bukhari(payload);
+    const resultadd = await addbukhari.save();
     return NextResponse.json({ resultadd, success: true })
 }
