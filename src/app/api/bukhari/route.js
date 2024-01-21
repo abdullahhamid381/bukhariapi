@@ -17,6 +17,7 @@ export async function GET() {
 
 export async function POST(request) {
     let payload = await request.json()
+    await mongoose.connect('mongodb+srv://abdullahhamid381:abdullahhamid786@cluster0.siyjtub.mongodb.net/BukhariDB?retryWrites=true&w=majority')
     let addbukhari = new Bukhari(payload);
     const resultadd = await addbukhari.save();
     return NextResponse.json({ resultadd, success: true })

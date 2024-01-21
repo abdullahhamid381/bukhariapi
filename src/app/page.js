@@ -4,8 +4,8 @@ import Link from "next/link"
 const Home=()=>{
   return(
     <div>
-      <h1>Home page</h1>
-      <Link href='bukharimethood'> Bukhari</Link>
+      <h1>AT TAQWA</h1>
+  
     </div>
   )
 }
