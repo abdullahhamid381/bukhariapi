@@ -1,9 +1,12 @@
-export default Bukharipost = ()=>{
+"use client"
+import Link from "next/link"
+
+const Bukharimethood=()=>{
     return(
         <div>
-            <h1>
-                ADD BUKHARI
-            </h1>
+        <Link href='bukharimethood/bukharipost'>BUkhari ADD</Link>
+     
         </div>
     )
 }
+export default Bukharimethood

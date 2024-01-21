@@ -1,12 +1,12 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import Link from "next/link";
+'use client'
+import Link from "next/link"
 
-export default function Home() {
-  return (
-<div>
-<Link href='/bukharimethood'>Bukhari</Link>
-  
-</div>
-  );
+const Home=()=>{
+  return(
+    <div>
+      <h1>Home page</h1>
+      <Link href='bukharimethood'> Bukhari</Link>
+    </div>
+  )
 }
+export default Home
