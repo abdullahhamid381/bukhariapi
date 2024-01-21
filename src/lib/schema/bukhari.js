@@ -4,6 +4,7 @@ const Bukharimodel= new mongoose.Schema({
     Baab:String,
     Book:String,
     Chapter:String,
+    Hadithno:String,
     Hadith:String,
     Status:String
 
