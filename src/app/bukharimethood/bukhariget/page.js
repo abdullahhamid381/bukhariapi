@@ -13,7 +13,7 @@ let bukhatialldataget = async()=>{
 
 const bukhariall = async () => {
     const hadith = await bukhatialldataget();
-    console.log(hadith)
+    // console.log(hadith)
   return (
    <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'40px',width:'90%',margin:'20px auto'}}>
   {
@@ -26,7 +26,7 @@ const bukhariall = async () => {
             <h3>Hadith Num : {item.Hadithnum} </h3>
             <h3 style={{lineHeight:'35px'}}>Hadith : {item.Hadith}</h3>
             <h3>Status : {item.Status} </h3>
-            <Link href={'bukharimethood/'+item._id}>Update</Link>
+            <Link href={item._id}>Update</Link>
     
         </div>
         )
