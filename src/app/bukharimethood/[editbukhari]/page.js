@@ -1,10 +1,10 @@
 'use client'
-import Link from "next/link"
+
 import { useEffect, useState } from "react"
 
-const Bukharipost = () => {
+const Bukharipost = (props) => {
 
-// STATE =============================================
+    // STATE =============================================
 
     const [Baab, setbaab] = useState('')
     const [Book, setbook] = useState('')
@@ -12,20 +12,22 @@ const Bukharipost = () => {
     const [Status, setstatus] = useState('')
     const [Hadithnum, sethadithnum] = useState('')
     const [Hadith, sethadith] = useState('')
-   
-useEffect(()=>{
-    gethadithdetail()
-},[]);
-const gethadithdetail=async()=>{
 
-let hadithdata = await fetch('http://localhost:3000/bukharimethood/65ae0559dc9ed126e373c7b1');
-hadithdata = await hadithdata.json();
-if(hadithdata.success){
-    let result = hadithdata.result;
-    setbaab(result.Baab)
-}
-console.log(hadithdata)
-}
+    useEffect(() => {
+        gethadithdetail()
+    }, []);
+
+    const gethadithdetail = async () => {
+        let hadithid = props.params.editbukhari
+        let hadithdata = await fetch('http://localhost:3000/bukharimethood/' + hadithid)
+        hadithdata = await hadithdata.json();
+        if (hadithdata.success) {
+            let result = hadithdata.result;
+            setbook(result.Book)
+        }
+
+    }
+
     return (
         <div>
             <h1>Bukhari Hadees Update here</h1>
