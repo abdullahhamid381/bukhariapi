@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 let bukhatialldataget = async()=>{
     let data = await fetch('http://localhost:3000/api/bukhari')
     data = await data.json();
@@ -24,6 +26,7 @@ const bukhariall = async () => {
             <h3>Hadith Num : {item.Hadithnum} </h3>
             <h3 style={{lineHeight:'35px'}}>Hadith : {item.Hadith}</h3>
             <h3>Status : {item.Status} </h3>
+            <Link href={'bukharimethood/'+item._id}>Update</Link>
     
         </div>
         )
