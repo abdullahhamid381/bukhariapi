@@ -1,76 +1,25 @@
-import Link from "next/link";
+import Link from 'next/link'
+import React from 'react'
 
-// let bukhatialldataget = async()=>{
-//     let data = await fetch('http://localhost:3000/api/bukhari')
-//     data = await data.json();
-//     if(data.success){
-//         return data.result
-//     }
-//     else{
-//         return {success:false}
-//     }
-// }
+const page = () => {
+  return (
+    <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr ',gap:'30px 0',marginTop:'50px',width:'90%',margin:' 50px auto 0 auto',placeItems:'center'}}>
+  
+        <Link href='/bukharimethood/bukhariget/revelation'>	
+        Chapter 1 : THE BOOK OF REVELATION 1-7</Link>
 
-const bukharidataget = async ()=>{
-    let data = await fetch ('http://localhost:3000/api/bukhari')
-    data = await data.json();
-    if(data.success){
-        return data.result;
-    }
-    else{
-        return {success:false}
-    }
+        <Link href='/bukharimethood/bukhariget/belief'>	
+        Chapter 2 : THE BOOK OF BELIEF  (FAITH) 8-58 </Link>
+       
+        <Link href='/bukharimethood/bukhariget/knowledge'>	
+        
+        Chapter 3 :  THE BOOK OF Knowledge(FAITH)  59-134 </Link>
+
+        <Link href='/bukharimethood/bukhariget/wuddu'>	
+        
+        Chapter 4 :  THE BOOK Of Wuddu (FAITH) 135-247</Link>
+    </div>
+  )
 }
 
-
-export default async function page(){
-    const bukharihadith = await bukharidataget();
-    console.log(bukharihadith)
-    return(
-        <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'40px',width:'90%',margin:'20px auto'}}>
-         {
-            bukharihadith.map((item)=>{
-                return(
-                    <div style={{background:'whiteSmoke',padding:'30px'}}>
-                    <h2>Book Name : {item.Book}</h2>
-                    <h3>Chapter Name: {item.Chapter}</h3>
-                    <h3>Baab : {item.Baab}</h3>
-                    <h3>Hadith Num : {item.Hadithnum} </h3>
-                    <h3 style={{lineHeight:'35px'}}>Hadith : {item.Hadith}</h3>
-                    <h3>Status : {item.Status} </h3>
-                    <Link href={item._id}>Update</Link>
-            
-                </div>
-                )
-            })
-          }
-           </div>
-    )
-}
-
-// const bukhariall = async () => {
-//     const hadith = await bukhatialldataget();
-//     // console.log(hadith)
-//   return (
-//    <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'40px',width:'90%',margin:'20px auto'}}>
-//   {
-//     hadith.map((item)=>{
-//         return(
-//             <div style={{background:'whiteSmoke',padding:'30px'}}>
-//             <h2>Book Name : {item.Book}</h2>
-//             <h3>Chapter Name: {item.Chapter}</h3>
-//             <h3>Baab : {item.Baab}</h3>
-//             <h3>Hadith Num : {item.Hadithnum} </h3>
-//             <h3 style={{lineHeight:'35px'}}>Hadith : {item.Hadith}</h3>
-//             <h3>Status : {item.Status} </h3>
-//             <Link href={item._id}>Update</Link>
-    
-//         </div>
-//         )
-//     })
-//   }
-//    </div>
-//   )
-// }
-
-// export default bukhariall
+export default page

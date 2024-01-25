@@ -2,6 +2,10 @@ import { Bukhari } from "@/lib/schema/bukhari";
 import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 
+
+
+// FOR GETt
+
 export async function GET() {
     let bukhariget = []
     let success=true
