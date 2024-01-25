@@ -38,7 +38,7 @@ const Bukharipost = () => {
             <h3>Hadees text</h3>
             <input type="text" value={Hadith} onChange={(e) => sethadith(e.target.value)} placeholder="enter your hadees text" />
             <br /><br />
-            <button onClick={addhadees}>ADD HADEES</button>
+            <button onClick={addhadees} style={{padding:'80px',cursor:'pointer'}}>ADD HADEES</button>
         </div>
     )
 }
