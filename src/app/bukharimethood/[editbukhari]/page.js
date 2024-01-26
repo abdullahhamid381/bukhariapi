@@ -23,7 +23,7 @@ const Bukharipost = (props) => {
         hadithdata = await hadithdata.json();
         if (hadithdata.success) {
             let result = hadithdata.result;
-            setbook(result.Book)
+            setbook(result.Status)
         }
 
     }
@@ -44,7 +44,7 @@ const Bukharipost = (props) => {
             <h3>Hadees text</h3>
             <input type="text" value={Hadith} onChange={(e) => sethadith(e.target.value)} placeholder="enter your hadees text" />
             <br /><br />
-            <button>ADD HADEES</button>
+            <button>update</button>
         </div>
     )
 }

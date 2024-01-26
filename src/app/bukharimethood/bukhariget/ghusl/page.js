@@ -14,7 +14,7 @@ const bukharidataget = async ()=>{
 
 export default async function page() {
     const bukharihadith = await bukharidataget();
-    const firstSevenItems = bukharihadith.slice(134, 247); // Get the first 7 items
+    const firstSevenItems = bukharihadith.slice(247, 293); // Get the first 7 items
     console.log(firstSevenItems);
 
     return (
