@@ -1,4 +1,3 @@
-
 'use client'
 import { useEffect, useState } from "react";
 
@@ -31,7 +30,7 @@ const Bukharipost = (props) => {
     }
   };
 
-  
+
 
   return (
     <div>
