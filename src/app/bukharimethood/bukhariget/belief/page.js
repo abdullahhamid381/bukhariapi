@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const bukharidataget = async ()=>{
-    let data = await fetch ('http://localhost:3000/api/bukhari')
+    let data = await fetch('http://localhost:3000/api/bukhari')
     data = await data.json();
     if(data.success){
         return data.result;

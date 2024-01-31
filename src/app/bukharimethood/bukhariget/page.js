@@ -18,7 +18,7 @@ const page = () => {
         <Link href='/bukharimethood/bukhariget/wuddu'>	
         
         Chapter 4 :  THE BOOK Of Wuddu (FAITH) 135-247</Link>
-        <Link href='/bukharimethood/bukhariget/wuddu'>	
+        <Link href='/bukharimethood/bukhariget/ghusl'>	
         
         Chapter 5 :  The Book Of Ghusl (Washing Of The Whole Body) 248-293</Link>
     </div>

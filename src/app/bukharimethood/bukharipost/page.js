@@ -2,7 +2,7 @@
 import Link from "next/link"
 import { useState } from "react"
 
-const Bukharipost = () => {
+const Muslimpost = () => {
     const [Baab, setbaab] = useState('')
     const [Book, setbook] = useState('')
     const [Chapter, setchapter] = useState('')
@@ -42,4 +42,4 @@ const Bukharipost = () => {
         </div>
     )
 }
-export default Bukharipost
+export default Muslimpost
