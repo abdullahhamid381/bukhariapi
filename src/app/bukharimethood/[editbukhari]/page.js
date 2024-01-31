@@ -30,8 +30,6 @@ const Bukharipost = (props) => {
     }
   };
 
-
-
   return (
     <div>
       <h1>Bukhari Hadees Update here</h1>
