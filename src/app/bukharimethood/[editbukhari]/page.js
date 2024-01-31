@@ -1,7 +1,5 @@
 'use client'
 import { useEffect, useState } from "react";
-
-
 const Bukharipost = (props) => {
   const [Chapter, setchapter] = useState("");
   const [Book, setbook] = useState("");
@@ -29,7 +27,6 @@ const Bukharipost = (props) => {
       console.error("Error fetching data:", error);
     }
   };
-
   return (
     <div>
       <h1>Bukhari Hadees Update here</h1>
