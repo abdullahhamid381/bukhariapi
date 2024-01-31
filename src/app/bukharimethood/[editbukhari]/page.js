@@ -7,11 +7,9 @@ const Bukharipost = (props) => {
   const [Baab, setbaab] = useState("");
   const [Status, setstatus] = useState("");
   const [Hadith, sethadith] = useState("");
-
   useEffect(() => {
     gethadithdetail();
   }, []);
-
   const gethadithdetail = async () => {
     try {
       let hadithid = props.params.editbukhari;
