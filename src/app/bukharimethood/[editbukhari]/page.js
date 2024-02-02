@@ -13,12 +13,17 @@ const Bukharipost = (props) => {
   const gethadithdetail = async () => {
     try {
       let hadithid = props.params.editbukhari;
-      let response = await fetch(`http://localhost:3000/bukharimethood/${hadithid}`);
+      let response = await fetch(`http://localhost:3000/api/bukhari/${hadithid}`);
       let data = await response.json();
 
       if (data.success) {
         let result = data.result;
+        setchapter(result.Chapter);
         setbook(result.Book);
+        sethadithnum(result.Hadithnum);
+        setbaab(result.Baab);
+        setstatus(result.Status);
+        sethadith(result.Hadith);
         console.log(Book);
       }
     } catch (error) {
