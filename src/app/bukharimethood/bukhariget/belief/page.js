@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Deletehadeesfun from "./Deletehadees";
 
 const bukharidataget = async ()=>{
     let data = await fetch('http://localhost:3000/api/bukhari')
@@ -30,6 +31,7 @@ export default async function page() {
                             <h3 style={{ lineHeight: '35px' }}>Hadith : {item.Hadith}</h3>
                             <h3>Status : {item.Status} </h3>
                             <Link href={'/bukharimethood/'+item._id}>Update</Link>
+                            <Deletehadeesfun id={item._id}/>
                         </div>
                     );
                 })

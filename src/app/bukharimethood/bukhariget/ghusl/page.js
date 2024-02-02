@@ -31,6 +31,7 @@ export default async function page() {
                             <h3 style={{ lineHeight: '35px' }}>Hadith : {item.Hadith}</h3>
                             <h3>Status : {item.Status} </h3>
                             <Link href={'/bukharimethood/'+item._id}>Update</Link>
+                          
                         </div>
                     );
                 })
