@@ -21,6 +21,21 @@ const page = () => {
         <Link href='/bukharimethood/bukhariget/ghusl'>	
         
         Chapter 5 :  The Book Of Ghusl (Washing Of The Whole Body) 248-293</Link>
+        <Link href='/bukharimethood/bukhariget/menses'>	
+        
+        Chapter 6 :  The Book Of Menses  234-333</Link>
+        <Link href='/bukharimethood/bukhariget/tayammum'>	
+        
+        Chapter 7 :  The Book Of tayammum  333-348</Link>
+        <Link href='/bukharimethood/bukhariget/salat'>	
+        
+        Chapter 8 :  The Book Of Salat  349-520</Link>
+        <Link href='/bukharimethood/bukhariget/salat-time'>	
+        
+        Chapter 9 :  The Book Of Salat TIme  521-602</Link>
+        <Link href='/bukharimethood/bukhariget/azan'>	
+        
+        Chapter 10 :  The Book Of Azan  603-734</Link>
     </div>
   )
 }

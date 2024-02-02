@@ -1,3 +1,4 @@
+import Deletehadeesfun from "@/lib/Deletehadees";
 import Link from "next/link";
 
 const bukharidataget = async ()=>{
@@ -31,7 +32,7 @@ export default async function page() {
                             <h3 style={{ lineHeight: '35px' }}>Hadith : {item.Hadith}</h3>
                             <h3>Status : {item.Status} </h3>
                             <Link href={'/bukharimethood/'+item._id}>Update</Link>
-                          
+                          <Deletehadeesfun id={item._id}/>
                         </div>
                     );
                 })

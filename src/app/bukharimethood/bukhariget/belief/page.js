@@ -1,5 +1,6 @@
+import Deletehadeesfun from "@/lib/Deletehadees";
 import Link from "next/link";
-import Deletehadeesfun from "./Deletehadees";
+
 
 const bukharidataget = async ()=>{
     let data = await fetch('http://localhost:3000/api/bukhari')
