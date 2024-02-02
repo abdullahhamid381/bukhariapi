@@ -30,6 +30,17 @@ const Bukharipost = (props) => {
       console.error("Error fetching data:", error);
     }
   };
+  let updatehadees= async()=>{
+    let hadithid = props.params.editbukhari
+    let data = await fetch(`http://localhost:3000/api/bukhari/${hadithid}`,{
+      method:"PUT",
+      body:JSON.stringify({Chapter,Book,Hadithnum,Baab,Status,Hadith})
+    });
+data= await data.json();
+if(data.result){
+  alert('hadees has been updated')
+}
+}
   return (
     <div>
       <h1>Bukhari Hadees Update here</h1>
@@ -47,7 +58,7 @@ const Bukharipost = (props) => {
       <input type="text" value={Hadith} onChange={(e) => sethadith(e.target.value)} placeholder="enter your hadees text" />
       <br />
       <br />
-      <button>update</button>
+      <button onClick={updatehadees}>update</button>
     </div>
   );
 };
