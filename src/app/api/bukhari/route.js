@@ -21,6 +21,10 @@ export async function GET() {
 }
 
 
+// FOR POST METHOOD
+
+
+
 export async function POST(request) {
     let payload = await request.json()
     await mongoose.connect('mongodb+srv://abdullahhamid381:abdullahhamid786@cluster0.siyjtub.mongodb.net/BukhariDB?retryWrites=true&w=majority')

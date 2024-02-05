@@ -36,6 +36,9 @@ const page = () => {
         <Link href='/bukharimethood/bukhariget/azan'>	
         
         Chapter 10 :  The Book Of Azan  603-734</Link>
+        <Link href='/bukharimethood/bukhariget/azanrules'>	
+        
+       Chapter 11 The Book Of Adhan (Sufa-Tus-Salat) 735-875</Link>
     </div>
   )
 }
